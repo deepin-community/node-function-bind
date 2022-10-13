@@ -1,0 +1,14 @@
+# hack with uversion mangle for getting newer version with 1.1.1
+version=4
+opts=\
+dversionmangle=auto,\
+uversionmangle=s/^1.1.1$/1.1.1+repacked/g,\
+filenamemangle=s%(?:.*?/)?v?@ANY_VERSION@(@ARCHIVE_EXT@)%@PACKAGE@-$1$2% \
+ https://github.com/Raynos/function-bind/tags (?:.*?/)?v?@ANY_VERSION@@ARCHIVE_EXT@ group
+
+opts=\
+ctype=nodejs,\
+component=has,\
+dversionmangle=auto,\
+filenamemangle=s%(?:.*?/)?v?@ANY_VERSION@(@ARCHIVE_EXT@)%node-has-$1$2% \
+ https://github.com/tarruda/has/tags (?:.*?/)?v?@ANY_VERSION@@ARCHIVE_EXT@ group

@@ -1,0 +1,4 @@
+/usr/share/doc/node-function-bind/changelog.Debian.gz          /usr/share/doc/node-has/changelog.Debian.gz
+/usr/share/doc/node-function-bind/                             /usr/share/doc/node-has/node-function-bind
+/usr/share/doc/node-function-bind/copyright                    /usr/share/doc/node-has/copyright
+/usr/share/doc/node-has                                        /usr/share/doc/node-function-bind/node-has

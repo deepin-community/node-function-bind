@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+MAINPACKAGE=node-function-bind
+
+%:
+	dh $@ --with nodejs
+
+override_dh_installdocs:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS) $(DEB_BUILD_PROFILES)))
+	dh_installdocs
+	install has/README.md debian/$(MAINPACKAGE)/usr/share/doc/node-has
+else
+	@echo '**********************************************************'
+	@echo 'Skip doc                                                  '
+	@echo '**********************************************************'
+endif

@@ -1,0 +1,31 @@
+Source: node-function-bind
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Ross Gammon <rossgammon@mail.dk>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , chai <!nocheck>
+ , mocha <!nocheck>
+ , node-tap (>= 10.7.2) <!nocheck>
+ , node-tape <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-function-bind
+Vcs-Git: https://salsa.debian.org/js-team/node-function-bind.git
+Homepage: https://github.com/Raynos/function-bind
+Rules-Requires-Root: no
+
+Package: node-function-bind
+Architecture: all
+Depends: ${misc:Depends}
+Provides: ${nodejs:Provides}
+Multi-Arch: foreign
+Description: Implementation of Function.prototype.bind
+ Function-bind can be used for unit tests, and is useful for webframeworks
+ that do not have the function-bind.
+ .
+ This package includes also the node-has (has) package,
+ Object.prototype.hasOwnProperty.call shortcut.
+ .
+ Node.js is an event-based server-side JavaScript engine.
