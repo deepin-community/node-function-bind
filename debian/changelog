@@ -1,3 +1,10 @@
+node-function-bind (1.1.1+repacked+~1.0.3-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix test for tap >= 15 (--no-cov) (Closes: #1009517)
+
+ -- Yadd <yadd@debian.org>  Thu, 21 Apr 2022 12:13:12 +0200
+
 node-function-bind (1.1.1+repacked+~1.0.3-1) unstable; urgency=medium
 
   * Team upload
